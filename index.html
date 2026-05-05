@@ -117,6 +117,14 @@
         <a href="#experience" class="btn-ghost" data-i18n="hero_cta_ghost"
           >View experience →</a
         >
+        <a
+          href="assets/Szymon_Sieczko_CV_EN.pdf"
+          class="btn-cv"
+          id="cvDownloadBtn"
+          download
+          data-i18n="hero_cta_cv"
+          >Download CV ↓</a
+        >
       </div>
 
       <div class="hero-stats">
@@ -658,28 +666,60 @@
             </div>
           </div>
           <div class="contact-right fade-up">
-            <div class="contact-availability" data-i18n="contact_avail_status">
-              Current status
-            </div>
-            <div class="avail-status">
+            <div class="avail-status" style="margin-bottom: 2.5rem">
               <div class="avail-dot"></div>
               <span data-i18n="avail_status">Available for projects</span>
             </div>
-            <div class="contact-availability" data-i18n="contact_avail_langs">
-              Languages
-            </div>
-            <div class="lang-grid">
-              <div class="lang-row">
-                <span class="lang-name" data-i18n="lang_name_pl">Polish</span>
-                <span class="lang-level" data-i18n="lang_level_pl">Native</span>
+            <form
+              id="contactForm"
+              class="contact-form"
+              novalidate>
+              <div class="form-group">
+                <label for="formName" data-i18n="form_label_name">Name</label>
+                <input
+                  type="text"
+                  id="formName"
+                  name="name"
+                  data-i18n-placeholder="form_placeholder_name"
+                  placeholder="Your name"
+                  required
+                  autocomplete="name" />
               </div>
-              <div class="lang-row">
-                <span class="lang-name" data-i18n="lang_name_en">English</span>
-                <span class="lang-level" data-i18n="lang_level_en"
-                  >B2 / Upper-Intermediate</span
+              <div class="form-group">
+                <label for="formEmail" data-i18n="form_label_email"
+                  >Email</label
                 >
+                <input
+                  type="email"
+                  id="formEmail"
+                  name="email"
+                  data-i18n-placeholder="form_placeholder_email"
+                  placeholder="your@email.com"
+                  required
+                  autocomplete="email" />
               </div>
-            </div>
+              <div class="form-group">
+                <label for="formMessage" data-i18n="form_label_message"
+                  >Message</label
+                >
+                <textarea
+                  id="formMessage"
+                  name="message"
+                  rows="5"
+                  data-i18n-placeholder="form_placeholder_message"
+                  placeholder="Tell me about your project…"
+                  required></textarea>
+              </div>
+              <div class="form-footer">
+                <button
+                  type="submit"
+                  class="btn-primary form-submit"
+                  data-i18n="form_submit">
+                  Send Message
+                </button>
+                <p class="form-status" id="formStatus" aria-live="polite"></p>
+              </div>
+            </form>
           </div>
         </div>
       </div>

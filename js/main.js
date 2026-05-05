@@ -25,6 +25,8 @@ themeToggle.addEventListener('click', () => {
 // ─── LANGUAGE ─────────────────────────────────────────────────────────────────
 let currentLang = 'en';
 
+const cvFiles = { en: 'assets/Szymon_Sieczko_CV_EN.pdf', pl: 'assets/Szymon_Sieczko_CV_PL.pdf' };
+
 function applyLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -38,9 +40,17 @@ function applyLang(lang) {
       el.innerHTML = translations[lang][key];
     }
   });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key] !== undefined) {
+      el.placeholder = translations[lang][key];
+    }
+  });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  const cvBtn = document.getElementById('cvDownloadBtn');
+  if (cvBtn) cvBtn.href = cvFiles[lang];
   document.documentElement.lang = lang;
   currentLang = lang;
   localStorage.setItem('lang', lang);
@@ -112,3 +122,47 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 fadeEls.forEach(el => obs.observe(el));
+
+// ─── CONTACT FORM ─────────────────────────────────────────────────────────────
+// Sign up at formspree.io, create a form, then replace YOUR_FORM_ID below.
+const FORM_ENDPOINT = 'https://formspree.io/f/mnjwvqwo';
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('.form-submit');
+    const t = translations[currentLang];
+
+    btn.disabled = true;
+    btn.textContent = t.form_sending;
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    const payload = {
+      name: document.getElementById('formName').value,
+      email: document.getElementById('formEmail').value,
+      message: document.getElementById('formMessage').value,
+    };
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error();
+      formStatus.textContent = t.form_success;
+      formStatus.className = 'form-status success';
+      contactForm.reset();
+    } catch {
+      formStatus.textContent = t.form_error;
+      formStatus.className = 'form-status error';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = t.form_submit;
+    }
+  });
+}

@@ -458,6 +458,23 @@ nav.menu-open .menu-toggle .bar:nth-child(3) {
   color: var(--text);
   border-color: var(--muted);
 }
+.btn-cv {
+  color: var(--accent3);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--accent3);
+  padding-bottom: 2px;
+  opacity: 0.8;
+  transition:
+    color 0.2s,
+    opacity 0.2s,
+    border-color 0.2s;
+}
+.btn-cv:hover {
+  opacity: 1;
+}
 
 .hero-stats {
   position: absolute;
@@ -1089,6 +1106,72 @@ section {
   font-size: 0.7rem;
   color: var(--muted);
   letter-spacing: 0.08em;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.form-group input,
+.form-group textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  padding: 0.85rem 1rem;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.6;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+.form-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.form-submit {
+  flex-shrink: 0;
+}
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.form-status {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.form-status.success {
+  color: var(--accent3);
+}
+.form-status.error {
+  color: var(--accent2);
 }
 
 /* FOOTER */

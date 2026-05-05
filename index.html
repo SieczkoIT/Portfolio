@@ -74,11 +74,6 @@
         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
       <div class="nav-controls">
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           ☀
         </button>
@@ -86,6 +81,11 @@
           <button class="lang-btn active" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="pl">PL</button>
         </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
     </nav>
 
@@ -670,10 +670,7 @@
               <div class="avail-dot"></div>
               <span data-i18n="avail_status">Available for projects</span>
             </div>
-            <form
-              id="contactForm"
-              class="contact-form"
-              novalidate>
+            <form id="contactForm" class="contact-form" novalidate>
               <div class="form-group">
                 <label for="formName" data-i18n="form_label_name">Name</label>
                 <input

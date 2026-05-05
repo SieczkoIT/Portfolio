@@ -1215,15 +1215,25 @@ footer p {
 @media (max-width: 900px) {
   nav {
     padding: 1rem 1.5rem;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+  .nav-brand {
+    min-width: 0;
+    flex-shrink: 1;
   }
   .nav-links {
     display: none;
   }
   .nav-controls {
     gap: 0.5rem;
+    flex-shrink: 0;
   }
   .menu-toggle {
     display: flex;
+  }
+  .hero-cta {
+    flex-wrap: wrap;
   }
   nav.menu-open {
     background: var(--surface);
@@ -1280,6 +1290,13 @@ footer p {
   .services-grid {
     grid-template-columns: 1fr;
   }
+  .edu-card {
+    flex-direction: column;
+  }
+  .edu-badge {
+    align-self: flex-start;
+    white-space: normal;
+  }
   .contact-inner {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -1290,5 +1307,22 @@ footer p {
   }
   .scroll-indicator {
     display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .lang-btn {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+  .theme-toggle,
+  .menu-toggle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  .nav-controls {
+    gap: 0.35rem;
   }
 }

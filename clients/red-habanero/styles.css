@@ -103,7 +103,7 @@ section { padding: 6rem 4rem; }
 .about-features { display: flex; flex-direction: column; gap: 1px; background: rgba(204,42,47,0.08); }
 .feature-row { background: var(--bg); display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.4rem 1.6rem; border-left: 2px solid transparent; transition: border-color 0.25s, background 0.2s; }
 .feature-row:hover { border-left-color: var(--accent); background: var(--surface-hover); }
-.feature-icon { font-size: 1.4rem; flex-shrink: 0; padding-top: 0.1rem; }
+.feature-icon { flex-shrink: 0; color: var(--accent); display: flex; align-items: center; }
 .feature-row strong { display: block; color: var(--text); font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem; }
 .feature-row p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.5; }
 

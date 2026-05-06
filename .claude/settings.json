@@ -18,7 +18,8 @@
       "WebFetch(domain:kartaweb.menu)",
       "WebFetch(domain:en.szafasmakow.pl)",
       "WebFetch(domain:jadlospis.menu)",
-      "WebFetch(domain:www.instagram.com)"
+      "WebFetch(domain:www.instagram.com)",
+      "Bash(grep*)"
     ],
     "deny": [
       "Bash(rm -rf*)",

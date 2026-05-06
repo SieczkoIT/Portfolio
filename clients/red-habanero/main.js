@@ -4,7 +4,6 @@ window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', wi
 let cur = 0;
 const slides = document.querySelectorAll('.slide');
 const sdots = document.querySelectorAll('.sdot');
-const counterEl = document.getElementById('counter-cur');
 
 function goToSlide(n) {
   slides[cur].classList.remove('active');
@@ -12,7 +11,6 @@ function goToSlide(n) {
   cur = n;
   slides[cur].classList.add('active');
   sdots[cur].classList.add('active');
-  counterEl.textContent = String(cur + 1).padStart(2, '0');
 }
 
 setInterval(() => { goToSlide((cur + 1) % slides.length); }, 4500);

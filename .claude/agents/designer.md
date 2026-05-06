@@ -41,6 +41,21 @@ Good pairing examples:
 - Syne (display) + Inter (body) — modern, clean, good for contemporary brands
 - DM Serif Display (display) + DM Sans (body) — warm, professional
 
+## Visual differentiation (critical when same niche + city)
+
+Before designing, check whether another client in `clients/` is in the **same business niche and the same city**. If yes, the two sites MUST differ on at least 4 of the following 6 axes — colour alone is not enough:
+
+| Axis | Examples of contrast |
+|---|---|
+| **Font pairing** | Bebas Neue + Barlow vs Oswald + Source Sans 3 vs Playfair + Lato |
+| **Hero layout** | Bottom-left content vs centred vs split-screen vs full-bleed text |
+| **Hero overlay style** | Corner gradient vs centre radial vs full darken vs diagonal sweep |
+| **About/story layout** | 2×2 icon cards vs horizontal feature rows vs numbered stats bar + text vs timeline |
+| **Gallery grid** | Symmetric 12-col grid vs asymmetric bento vs masonry 3-col vs horizontal scroll |
+| **Unique section** | Add a section the other site cannot have — e.g. spice scale (burger), team grid (salon), treatment menu (wellness) |
+
+When outputting the design brief to the builder, explicitly list which axes were differentiated and how.
+
 ## Layout & visual feedback
 
 When reviewing a built page, check:
@@ -48,5 +63,6 @@ When reviewing a built page, check:
 - Is the accent colour used sparingly (max 2–3 places per section)?
 - Does the spacing feel breathable or cramped?
 - Does the overall feel match the business type and target audience?
+- If another client in the same niche + city exists — are there at least 4 structural differences?
 
 Give specific, actionable feedback — not "looks good", but "the hero CTA button is too small on mobile, increase padding to 1rem 2.5rem".

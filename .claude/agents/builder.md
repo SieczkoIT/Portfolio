@@ -29,9 +29,13 @@ You always produce three files per client: `clients/<slug>/index.html`, `clients
 
 **Wellness centre**: Nav · Hero · About · Booking CTA strip · Services · Pricing · Team · Gallery · Reviews · Contact · Footer (+ Gift vouchers if brief says yes)
 
+## Visual differentiation
+
+Before building, check if any existing `clients/` site serves the same business niche in the same city. If so, the designer brief must have specified at least 4 structural differences (font pairing, hero layout, gallery type, unique section, etc.). Do not start building until the designer has confirmed this. Never default to the kukubyku layout as a template for same-niche clients — use it only as a quality bar for code, not as a visual reference.
+
 ## Reference
 
-Always read `clients/kukubyku/index.html`, `styles.css`, and `main.js` before building — they are the quality and pattern reference.
+Always read `clients/kukubyku/index.html`, `styles.css`, and `main.js` before building — they are the **code quality and pattern reference**, not the visual template. Each client site must have its own distinct visual execution.
 
 ## After building
 

@@ -130,5 +130,5 @@ function sendToWhatsApp(e) {
   if (type === 'dostawa' && address) msg += `\nAdres: ${address}`;
   msg += `\nImię: ${name}`;
 
-  window.open('https://wa.me/48884608581?text=' + encodeURIComponent(msg), '_blank');
+  window.open('https://wa.me/48882518260?text=' + encodeURIComponent(msg), '_blank');
 }

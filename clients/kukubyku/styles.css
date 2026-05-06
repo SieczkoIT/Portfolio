@@ -194,8 +194,10 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
 .cart-input { width: 100%; background: var(--charcoal); border: 1px solid rgba(212,168,67,0.15); color: var(--cream); padding: 0.75rem 1rem; font-size: 0.88rem; font-family: 'Barlow', sans-serif; outline: none; transition: border-color 0.2s; }
 .cart-input::placeholder { color: var(--text-muted); }
 .cart-input:focus { border-color: var(--gold); }
-.btn-wa { display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: #25D366; color: #fff; padding: 1rem; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; cursor: pointer; }
-.btn-wa:hover { background: #1dbe5a; }
+.btn-order { display: block; width: 100%; background: var(--gold); color: var(--black); border: none; padding: 1rem; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); }
+.btn-order:hover { background: var(--gold-light); }
+.btn-order:disabled { opacity: 0.55; cursor: not-allowed; }
+.cart-success { color: var(--gold); font-size: 1rem; text-align: center; padding: 3rem 0; line-height: 1.8; font-weight: 600; }
 .cart-float { display: none; position: fixed; bottom: 2rem; right: 2rem; z-index: 250; background: var(--gold); color: var(--black); border: none; padding: 0.85rem 1.4rem; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; align-items: center; gap: 0.6rem; box-shadow: 0 4px 24px rgba(0,0,0,0.4); transition: background 0.2s, transform 0.15s; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); }
 .cart-float:hover { background: var(--gold-light); transform: translateY(-2px); }
 .cart-float-badge { background: var(--black); color: var(--gold); border-radius: 50%; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; }

@@ -116,19 +116,48 @@ function toggleDelivery(radio) {
   document.getElementById('delivery-fields').classList.toggle('visible', radio.value === 'dostawa');
 }
 
-function sendToWhatsApp(e) {
+function sendOrder(e) {
   e.preventDefault();
   if (cart.length === 0) return;
+
+  const btn = e.currentTarget;
   const name = document.getElementById('customer-name').value.trim() || 'Klient';
   const type = document.querySelector('input[name="order-type"]:checked').value;
   const address = document.getElementById('delivery-address').value.trim();
 
-  const lines = cart.map(i => `• ${i.name} x${i.qty} — ${i.price * i.qty} zł`).join('\n');
+  const lines = cart.map(i => `${i.name} x${i.qty} — ${i.price * i.qty} zł`).join('\n');
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
 
-  let msg = `Dzień dobry! Chciałbym/chciałabym złożyć zamówienie 🍔\n\n${lines}\n\nRazem: ${total} zł\nRodzaj: ${type === 'dostawa' ? 'Dostawa' : 'Na miejscu'}`;
-  if (type === 'dostawa' && address) msg += `\nAdres: ${address}`;
-  msg += `\nImię: ${name}`;
+  let orderText = lines + `\n\nRazem: ${total} zł\nRodzaj: ${type === 'dostawa' ? 'Dostawa' : 'Na miejscu'}`;
+  if (type === 'dostawa' && address) orderText += `\nAdres: ${address}`;
 
-  window.open('https://wa.me/48882518260?text=' + encodeURIComponent(msg), '_blank');
+  btn.textContent = 'Wysyłanie...';
+  btn.disabled = true;
+
+  fetch('https://formspree.io/f/mnjwvqwo', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: `Nowe zamówienie KukuByku — ${name}`,
+      Imię: name,
+      Zamówienie: orderText,
+      Razem: total + ' zł'
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.ok) {
+      cart.splice(0, cart.length);
+      document.getElementById('cart-float').style.display = 'none';
+      document.getElementById('cart-items').innerHTML = '<p class="cart-success">✓ Zamówienie wysłane!<br>Oddzwonimy wkrótce, aby potwierdzić.</p>';
+      document.getElementById('cart-footer').style.display = 'none';
+    } else {
+      btn.textContent = 'Błąd — spróbuj ponownie';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    btn.textContent = 'Błąd — spróbuj ponownie';
+    btn.disabled = false;
+  });
 }

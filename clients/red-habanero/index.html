@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ PRIMARY SEO ═══ -->
+<title>Red Habanero – Burgery i Steki w Rudzie Śląskiej</title>
+<meta name="description" content="Red Habanero – burgery wołowe i steki premium w Rudzie Śląskiej. Numer 1 restauracja w mieście. Ostrość do wyboru. Dowóz, rezerwacje: 791 737 737.">
+<meta name="keywords" content="Red Habanero, burgery Ruda Śląska, steki Ruda Śląska, restauracja Ruda Śląska, ostry burger Śląsk, numer 1 restauracja Ruda Śląska">
+<meta name="author" content="Red Habanero">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://redhabanero.pl/">
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Red Habanero – Burgery i Steki w Rudzie Śląskiej">
+<meta property="og:description" content="Numer 1 restauracja w Rudzie Śląskiej. Burgery wołowe, steki premium, ostrość do wyboru. Dowóz: 791 737 737.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://redhabanero.pl/">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Red Habanero">
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Red Habanero – Ruda Śląska">
+<meta name="twitter:description" content="Numer 1 restauracja w Rudzie Śląskiej. Burgery, steki, ostrość 1–5. Dowóz: 791 737 737.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80">
+
+<!-- ═══ SCHEMA.ORG ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Red Habanero",
+  "description": "Burgery wołowe i steki premium w Rudzie Śląskiej. Otwarta kuchnia, ostrość do wyboru, numer 1 restauracja w mieście.",
+  "url": "https://redhabanero.pl",
+  "telephone": "+48791737737",
+  "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80",
+  "priceRange": "$$",
+  "servesCuisine": ["American", "Burgers", "Steakhouse"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. 1 Maja 61",
+    "addressLocality": "Ruda Śląska",
+    "postalCode": "41-706",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "14:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "12:00", "closes": "22:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/Red.Habanero.Burgery/",
+    "https://www.instagram.com/red.habanero.red/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "111",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌶</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-logo" href="#"><span>Red</span> Habanero</a>
+  <ul class="nav-links">
+    <li><a href="#o-nas">O nas</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <div class="slides">
+    <div class="slide slide-1 active"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+    <div class="slide slide-4"></div>
+  </div>
+  <div class="slide-counter">
+    <div class="counter-current" id="counter-cur">01</div>
+    <div class="counter-line"></div>
+    <div class="counter-total">04</div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Ruda Śląska · ul. 1 Maja 61</p>
+    <h1 class="hero-title">Red<br><span class="accent">Habanero</span></h1>
+    <p class="hero-subtitle">Ogień w każdym kęsie. Burgery wołowe, steki premium i otwarta kuchnia — numer 1 w Rudzie Śląskiej.</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn-primary">Zobacz menu</a>
+      <a href="#kontakt" class="btn-secondary">Znajdź nas</a>
+    </div>
+  </div>
+  <div class="slider-dots">
+    <div class="sdot active" onclick="goToSlide(0)"></div>
+    <div class="sdot" onclick="goToSlide(1)"></div>
+    <div class="sdot" onclick="goToSlide(2)"></div>
+    <div class="sdot" onclick="goToSlide(3)"></div>
+  </div>
+</section>
+
+<!-- ═══ STRIP ═══ -->
+<div class="strip">
+  <div class="strip-inner">
+    <span>Burgery z grilla</span><span class="ds">✦</span>
+    <span>Steki premium</span><span class="ds">✦</span>
+    <span>Otwarta kuchnia</span><span class="ds">✦</span>
+    <span>Ostrość 1–5</span><span class="ds">✦</span>
+    <span>Wołowina premium</span><span class="ds">✦</span>
+    <span>Dowóz do domu</span><span class="ds">✦</span>
+    <span>Numer 1 w Rudzie Śląskiej</span><span class="ds">✦</span>
+    <span>4 mln SHU</span><span class="ds">✦</span>
+    <span>Burgery z grilla</span><span class="ds">✦</span>
+    <span>Steki premium</span><span class="ds">✦</span>
+    <span>Otwarta kuchnia</span><span class="ds">✦</span>
+    <span>Ostrość 1–5</span><span class="ds">✦</span>
+    <span>Wołowina premium</span><span class="ds">✦</span>
+    <span>Dowóz do domu</span><span class="ds">✦</span>
+    <span>Numer 1 w Rudzie Śląskiej</span><span class="ds">✦</span>
+    <span>4 mln SHU</span><span class="ds">✦</span>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="o-nas">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label">O nas</p>
+      <h2 class="section-title">Ogień w<br>każdym kęsie</h2>
+      <p>Red Habanero to miejsce, gdzie <strong>wołowina najwyższej jakości</strong> spotyka się z prawdziwą pasją do gotowania. Otwarta kuchnia, świeże składniki i burgery, które pamiętasz długo po ostatnim kęsie.</p>
+      <p>Nasz <strong>autorski burger Red Habanero</strong> to wyzwanie dla śmiałych — pięć poziomów ostrości, od łagodnego ciepła po ekstremalne miliony SHU. Kucharz gotuje na Twoich oczach. Każdy wybiera swój ogień.</p>
+      <p>Numer jeden wśród restauracji w Rudzie Śląskiej. Nie dlatego, że tak mówimy — dlatego, że <strong>goście wracają</strong>.</p>
+    </div>
+    <div class="about-visual">
+      <div class="about-card">
+        <span class="about-card-icon">🥩</span>
+        <h3>Wołowina premium</h3>
+        <p>Świeżo mielona, starannie dobrana każdego dnia.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">🔥</span>
+        <h3>Ostrość 1–5</h3>
+        <p>Od łagodnego ciepła po ekstremalny ogień. Ty wybierasz.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">👨‍🍳</span>
+        <h3>Otwarta kuchnia</h3>
+        <p>Widzisz jak powstaje Twoje jedzenie. Zero tajemnic.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">🚗</span>
+        <h3>Własny dowóz</h3>
+        <p>Telefonuj i zamawiaj. Dowozimy na terenie Rudy Śląskiej.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section class="gallery" id="galeria">
+  <div class="gallery-header">
+    <p class="section-label">Galeria</p>
+    <h2 class="section-title">Smak, który widać</h2>
+  </div>
+  <div class="gallery-grid">
+    <!-- PLACEHOLDER: replace with images/gallery-1.jpg -->
+    <div class="gallery-item g1" onclick="openLightbox('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=90')">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&q=80" alt="Klasyczny burger wołowy">
+      <span class="glabel">Burger wołowy</span>
+    </div>
+    <!-- PLACEHOLDER: replace with images/gallery-2.jpg -->
+    <div class="gallery-item g2" onclick="openLightbox('https://images.unsplash.com/photo-1544025162-d76694265947?w=1400&q=90')">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Stek premium">
+      <span class="glabel">Stek premium</span>
+    </div>
+    <!-- PLACEHOLDER: replace with images/gallery-3.jpg -->
+    <div class="gallery-item g3" onclick="openLightbox('https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=1400&q=90')">
+      <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=700&q=80" alt="Burger z bekonem">
+      <span class="glabel">Bacon burger</span>
+    </div>
+    <!-- PLACEHOLDER: replace with images/gallery-4.jpg -->
+    <div class="gallery-item g4" onclick="openLightbox('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1400&q=90')">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="Stek wysmażony">
+      <span class="glabel">Wysmażony stek</span>
+    </div>
+    <!-- PLACEHOLDER: replace with images/gallery-5.jpg -->
+    <div class="gallery-item g5" onclick="openLightbox('https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=1400&q=90')">
+      <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=900&q=80" alt="Podwójny burger">
+      <span class="glabel">Double burger</span>
+    </div>
+    <!-- PLACEHOLDER: replace with images/gallery-6.jpg -->
+    <div class="gallery-item g6" onclick="openLightbox('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=90')">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80" alt="Wnętrze restauracji">
+      <span class="glabel">Klimat miejsca</span>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- ═══ MENU ═══ -->
+<section class="menu-section" id="menu">
+  <div class="menu-header">
+    <div>
+      <p class="section-label">Karta dań</p>
+      <h2 class="section-title">Nasze menu</h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="showTab('burgery',this)">Burgery</button>
+      <button class="tab-btn" onclick="showTab('steki',this)">Steki</button>
+      <button class="tab-btn" onclick="showTab('przekaski',this)">Przekąski</button>
+      <button class="tab-btn" onclick="showTab('napoje',this)">Napoje</button>
+    </div>
+  </div>
+  <div class="menu-grid">
+
+    <div class="menu-category active" id="cat-burgery">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Hamburger Halembski</div>
+          <div class="menu-item-desc">Autorski burger inspirowany dzielnicą — zapytaj obsługę o skład dnia</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Burger Havranek</div>
+          <div class="menu-item-desc">Klasyk w naszym stylu — wołowina, świeże składniki, własny sos</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Jajcoburger</div>
+          <div class="menu-item-desc">Wołowina, sadzone jajko, bekon, cheddar, sos sriracha</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Jack's</div>
+          <div class="menu-item-desc">200g wołowiny, pieczarki, cheddar, bekon, pomidor, cebula, sos BBQ</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">
+            Red Habanero
+            <span class="heat-badge"><span>🌶</span><span>🌶</span><span>🌶</span><span>🌶</span><span>🌶</span></span>
+          </div>
+          <div class="menu-item-desc">Nasz flagowy burger — ostrość do wyboru od 1 do 5. Od ciepłego po 4 mln SHU. Dla odważnych.</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+    </div>
+
+    <div class="menu-category" id="cat-steki">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Stek — zapytaj o kartę</div>
+          <div class="menu-item-desc">Steki przyrządzane na różne stopnie wysmażenia — krwisty, medium, dobrze wysmażony. Aktualna karta u obsługi.</div>
+        </div>
+        <div class="menu-item-price">od XX zł</div>
+      </div>
+    </div>
+
+    <div class="menu-category" id="cat-przekaski">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Pancake Serowo Malinowy</div>
+          <div class="menu-item-desc">Miękkie naleśniki z serem mascarpone i sosem malinowym</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Dodatki i przekąski</div>
+          <div class="menu-item-desc">Frytki, krążki cebulowe, sosy — zapytaj obsługę o aktualną ofertę</div>
+        </div>
+        <div class="menu-item-price">od XX zł</div>
+      </div>
+    </div>
+
+    <div class="menu-category" id="cat-napoje">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Fritz-Cola</div>
+          <div class="menu-item-desc">Rzemieślnicza cola z Hamburga — intensywna, oryginalna</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Piwo z kranu</div>
+          <div class="menu-item-desc">Red ale i inne — pytaj obsługę o aktualną kartę piw</div>
+        </div>
+        <div class="menu-item-price">od XX zł</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <div class="menu-item-name">Woda / Soki</div>
+          <div class="menu-item-desc">Gazowana, niegazowana, soki owocowe</div>
+        </div>
+        <div class="menu-item-price">XX zł</div>
+      </div>
+    </div>
+
+  </div>
+  <p class="menu-note">Ceny zawierają VAT. Menu może się zmieniać sezonowo. Pytaj obsługę o aktualne specjały i stopnie ostrości.</p>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="reviews" id="opinie">
+  <div class="reviews-header">
+    <p class="section-label">Opinie</p>
+    <h2 class="section-title">Co mówią<br>nasi goście</h2>
+    <div class="reviews-score">
+      <div class="score-num">4.7</div>
+      <div class="score-meta">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div>Numer 1 z 80 restauracji w Rudzie Śląskiej · TripAdvisor</div>
+      </div>
+    </div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <p class="review-text">Najlepszy burger od lat. Ogromny wybór świeżych burgerów przyrządzanych według życzenia — krwisty, medium lub dobrze wysmażony.</p>
+      <div class="review-author">Peter A · TripAdvisor ⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="review-card">
+      <p class="review-text">Jeden z najlepszych burgerów, jakie jadłem. Cała rodzina była pod wrażeniem — świeże składniki, mięso zrobione jak prosiłem, miękka bułka.</p>
+      <div class="review-author">Jacek J · TripAdvisor ⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="review-card">
+      <p class="review-text">Burgery Red Habanero nie są przereklamowane. Doskonała jakość wołowiny, przemyślane składniki. Wróciłem następnego dnia po raz drugi.</p>
+      <div class="review-author">RecenzuJem.pl ⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="kontakt">
+  <div class="contact-grid">
+    <div>
+      <p class="section-label">Kontakt</p>
+      <h2 class="section-title">Znajdź<br>nas</h2>
+      <div class="contact-info-block">
+        <h3>Adres</h3>
+        <p>ul. 1 Maja 61</p>
+        <p>41-706 Ruda Śląska</p>
+      </div>
+      <div class="contact-info-block">
+        <h3>Telefon i zamówienia</h3>
+        <a href="tel:+48791737737">791 737 737</a>
+      </div>
+      <div class="contact-info-block">
+        <h3>Godziny otwarcia</h3>
+        <div class="hours-grid">
+          <span>Poniedziałek – Piątek</span><strong>14:00 – 22:00</strong>
+          <span>Sobota – Niedziela</span><strong>12:00 – 22:00</strong>
+        </div>
+      </div>
+      <div class="contact-info-block">
+        <h3>Social media</h3>
+        <a href="https://www.facebook.com/Red.Habanero.Burgery/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/red.habanero.red/" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="map-placeholder">
+      <div class="map-pin"></div>
+      <div class="map-address">
+        <strong>Red Habanero</strong>
+        ul. 1 Maja 61, Ruda Śląska
+      </div>
+      <a href="https://maps.google.com/?q=Red+Habanero+ul.+1+Maja+61+Ruda+Slaska" target="_blank" class="map-link">Otwórz w Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-logo"><span>Red</span> Habanero</div>
+  <p>&#169; 2025 Red Habanero · Ruda Śląska</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/Red.Habanero.Burgery/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/red.habanero.red/" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

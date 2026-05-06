@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git branch*)",
+      "Bash(git stash*)",
+      "Bash(npx serve*)",
+      "Bash(find . *)",
+      "Bash(ls*)",
+      "WebFetch(domain:nawidelcu.pl)",
+      "WebFetch(domain:redhabanero.pl)",
+      "WebFetch(domain:restaurantguru.com)",
+      "WebFetch(domain:kartaweb.menu)",
+      "WebFetch(domain:en.szafasmakow.pl)",
+      "WebFetch(domain:jadlospis.menu)",
+      "WebFetch(domain:www.instagram.com)"
+    ],
+    "deny": [
+      "Bash(rm -rf*)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -f*)"
+    ]
+  }
+}

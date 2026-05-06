@@ -152,6 +152,34 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
 .social-links a { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
 .social-links a:hover { color: var(--gold); border-color: var(--gold); }
 
+/* ── PROMO BANNER ── */
+.promo-banner { background: var(--gold); overflow: hidden; }
+.promo-inner { display: grid; grid-template-columns: 1fr 1fr; max-width: 1400px; margin: 0 auto; min-height: 400px; }
+.promo-text { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
+.promo-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(14,13,11,0.5); margin-bottom: 1rem; }
+.promo-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 7vw, 6rem); line-height: 0.92; letter-spacing: 0.02em; color: var(--black); margin-bottom: 1.5rem; }
+.promo-desc { font-size: 0.95rem; color: rgba(14,13,11,0.65); line-height: 1.7; max-width: 380px; margin-bottom: 2rem; }
+.promo-bottom { display: flex; align-items: center; gap: 2rem; }
+.promo-price { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--black); line-height: 1; }
+.btn-promo { background: var(--black); color: var(--gold); padding: 0.9rem 2.2rem; font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); transition: background 0.2s; display: inline-block; }
+.btn-promo:hover { background: #2c2820; }
+.promo-visual { position: relative; overflow: hidden; }
+.promo-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 8s ease; }
+.promo-banner:hover .promo-visual img { transform: scale(1.04); }
+
+/* ── INSTAGRAM ── */
+.insta-section { background: var(--dark); padding: 6rem 4rem; }
+.insta-top { display: flex; justify-content: space-between; align-items: flex-end; max-width: 1200px; margin: 0 auto 3rem; }
+.insta-follow { display: inline-block; border: 1px solid rgba(212,168,67,0.35); color: var(--gold); padding: 0.8rem 2rem; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, background 0.2s; white-space: nowrap; }
+.insta-follow:hover { border-color: var(--gold); background: rgba(212,168,67,0.07); }
+.insta-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+.insta-item { position: relative; aspect-ratio: 1; overflow: hidden; display: block; }
+.insta-item img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.88) saturate(0.85); transition: transform 0.45s ease, filter 0.3s; }
+.insta-item:hover img { transform: scale(1.06); filter: brightness(0.5) saturate(1); }
+.insta-hover { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+.insta-hover span { color: #fff; font-weight: 600; font-size: 1rem; letter-spacing: 0.05em; }
+.insta-item:hover .insta-hover { opacity: 1; }
+
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
@@ -165,4 +193,10 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 150px 150px 150px; }
   .g1,.g2,.g3,.g4,.g5,.g6 { grid-column: auto; grid-row: auto; }
   footer { flex-direction: column; text-align: center; }
+  .promo-inner { grid-template-columns: 1fr; }
+  .promo-visual { display: none; }
+  .promo-text { padding: 3.5rem 1.5rem; }
+  .insta-section { padding: 4rem 1.5rem; }
+  .insta-top { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .insta-grid { grid-template-columns: repeat(3, 1fr); }
 }

@@ -235,9 +235,9 @@ footer p { font-size: 0.78rem; color: var(--muted); }
 .social-links a { color: var(--muted); text-decoration: none; font-size: 0.73rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
 .social-links a:hover { color: var(--accent); border-color: var(--accent); }
 .nav-phone-item { display: none; }
-#back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: var(--text); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(12px); transition: opacity 0.25s ease, transform 0.25s ease; z-index: 150; }
+#back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: var(--text); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity 0.25s ease, transform 0.25s ease; z-index: 150; }
 #back-to-top:hover { background: var(--accent-hover); }
-#back-to-top.visible { opacity: 1; transform: translateY(0); }
+#back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .will-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .will-reveal.revealed { opacity: 1; transform: translateY(0); }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }

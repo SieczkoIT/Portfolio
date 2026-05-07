@@ -29,6 +29,7 @@ nav.scrolled::before, nav.open::before { opacity: 1; }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a { color: var(--text); text-decoration: none; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.55; transition: opacity 0.2s, color 0.2s; }
 .nav-links a:hover { opacity: 1; color: var(--accent); }
+.nav-links a.active { opacity: 1; color: var(--accent); }
 .nav-phone { color: var(--accent); text-decoration: none; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.06em; transition: color 0.2s; }
 .nav-phone:hover { color: var(--text); }
 
@@ -203,6 +204,11 @@ footer p { font-size: 0.78rem; color: var(--muted); }
 .social-links a { color: var(--muted); text-decoration: none; font-size: 0.73rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
 .social-links a:hover { color: var(--accent); border-color: var(--accent); }
 .nav-phone-item { display: none; }
+#back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: var(--text); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(12px); transition: opacity 0.25s ease, transform 0.25s ease; z-index: 150; }
+#back-to-top:hover { background: var(--accent-hover); }
+#back-to-top.visible { opacity: 1; transform: translateY(0); }
+.will-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.will-reveal.revealed { opacity: 1; transform: translateY(0); }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); transition: transform 0.3s, opacity 0.3s; transform-origin: center; }
 nav.open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }

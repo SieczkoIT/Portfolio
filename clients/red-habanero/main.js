@@ -1,5 +1,41 @@
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+const sections = document.querySelectorAll('section[id]:not(#hero)');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-60px 0px -40% 0px' });
+sections.forEach(s => sectionObserver.observe(s));
+
+document.querySelectorAll('.feature-row, .review-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.08}s`;
+});
+const revealTargets = document.querySelectorAll(
+  '.about-stats, .about-features, .gallery-bento, .reviews-cards, .gallery-header, .menu-header, .reviews-lead, .heat-header'
+);
+const revealObs = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('revealed'); obs.unobserve(entry.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+[...revealTargets, ...document.querySelectorAll('.feature-row, .review-card')].forEach(el => {
+  if (el.getBoundingClientRect().top >= window.innerHeight) {
+    el.classList.add('will-reveal');
+    revealObs.observe(el);
+  }
+});
 
 const hamburger = document.getElementById('hamburger');
 hamburger.addEventListener('click', () => {

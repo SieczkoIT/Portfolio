@@ -54,13 +54,12 @@ nav.scrolled::before, nav.open::before { opacity: 1; }
 .btn-secondary { color: var(--cream); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 0; border-bottom: 1px solid rgba(245,240,232,0.3); transition: border-color 0.2s, color 0.2s; }
 .btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
 
-.slider-dots { position: absolute; bottom: 2rem; right: 4rem; z-index: 10; display: flex; gap: 0.6rem; align-items: center; }
+.hero-controls { position: absolute; bottom: 2rem; right: 4rem; z-index: 10; display: flex; align-items: center; gap: 0.75rem; }
+.slider-dots { display: flex; gap: 0.6rem; align-items: center; }
 .sdot { width: 6px; height: 6px; background: rgba(245,240,232,0.3); cursor: pointer; transition: all 0.3s; }
 .sdot.active { background: var(--gold); width: 24px; }
-.hero-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.15); color: #fff; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
-.hero-arrow:hover { background: rgba(0,0,0,0.65); }
-.hero-prev { left: 2rem; }
-.hero-next { right: 7rem; }
+.hero-arrow { background: none; border: none; color: rgba(245,240,232,0.45); display: flex; align-items: center; justify-content: center; padding: 4px; cursor: pointer; transition: color 0.2s; }
+.hero-arrow:hover { color: var(--gold); }
 
 .slide-counter { position: absolute; top: 50%; right: 4rem; z-index: 10; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .counter-current { font-size: 3rem; color: var(--gold); line-height: 1; }
@@ -236,7 +235,7 @@ nav.open { border-bottom: 1px solid rgba(212,168,67,0.15); }
   .hero-content { padding: 0 1.5rem 4rem; }
   .hero-title { font-size: 4rem; }
   .slide-counter { display: none; }
-  .hero-arrow { display: none; }
+  .hero-controls { right: 1.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .booking-strip { padding: 4rem 1.5rem; }
   .booking-strip-title { font-size: 2.5rem; }

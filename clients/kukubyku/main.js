@@ -66,6 +66,8 @@ function goToSlide(n) {
 }
 
 setInterval(() => { goToSlide((cur + 1) % slides.length); }, 4500);
+document.querySelector('.hero-prev').addEventListener('click', () => goToSlide((cur - 1 + slides.length) % slides.length));
+document.querySelector('.hero-next').addEventListener('click', () => goToSlide((cur + 1) % slides.length));
 
 function showTab(cat, btn) {
   document.querySelectorAll('.menu-category').forEach(el => el.classList.remove('active'));
@@ -83,6 +85,23 @@ function openLightbox(src) {
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
   document.body.style.overflow = '';
+}
+
+const rezForm = document.getElementById('rez-form');
+if (rezForm) {
+  rezForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = rezForm.querySelector('[type=submit]');
+    btn.textContent = 'Wysyłanie…'; btn.disabled = true;
+    try {
+      const res = await fetch(rezForm.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(rezForm) });
+      if (res.ok) { rezForm.innerHTML = '<p class="form-success">Dziękujemy! Oddzwonimy wkrótce.</p>'; }
+      else { throw new Error(); }
+    } catch {
+      btn.textContent = 'Zarezerwuj stolik'; btn.disabled = false;
+      rezForm.querySelector('.form-error').style.display = 'block';
+    }
+  });
 }
 
 document.addEventListener('keydown', e => {

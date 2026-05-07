@@ -86,6 +86,7 @@
     <li><a href="#galeria">Galeria</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#rezerwacja">Rezerwacja</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false">
@@ -120,6 +121,8 @@
     <div class="sdot" onclick="goToSlide(2)"></div>
     <div class="sdot" onclick="goToSlide(3)"></div>
   </div>
+  <button class="hero-arrow hero-prev" aria-label="Poprzedni slajd"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button class="hero-arrow hero-next" aria-label="Następny slajd"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </section>
 
 <div class="strip">
@@ -310,6 +313,63 @@
       <img src="https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?w=400&q=80" alt="">
       <div class="insta-hover"><span>♥ 134</span></div>
     </a>
+  </div>
+</section>
+
+<section class="booking-strip">
+  <p class="booking-strip-label">Rezerwacje</p>
+  <h2 class="booking-strip-title">Zarezerwuj stolik</h2>
+  <p class="booking-strip-sub">Wypełnij formularz — oddzwonimy w ciągu godziny.</p>
+  <a href="#rezerwacja" class="booking-strip-btn">Zarezerwuj teraz</a>
+</section>
+
+<section class="rez-section" id="rezerwacja">
+  <div class="rez-inner">
+    <div class="rez-header">
+      <p class="section-label">Rezerwacje</p>
+      <h2 class="section-title">Zarezerwuj<br>stolik</h2>
+      <p class="rez-sub">Zadzwoń na <a href="tel:884608581">884 608 581</a> lub wypełnij formularz — skontaktujemy się z Tobą w ciągu godziny.</p>
+    </div>
+    <form class="rez-form" id="rez-form" action="https://formspree.io/f/mnjwvqwo" method="POST">
+      <div class="form-error" style="display:none">Coś poszło nie tak. Spróbuj ponownie lub zadzwoń.</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rez-name">Imię i nazwisko</label>
+          <input type="text" id="rez-name" name="name" placeholder="Jan Kowalski" required>
+        </div>
+        <div class="form-group">
+          <label for="rez-phone">Telefon</label>
+          <input type="tel" id="rez-phone" name="phone" placeholder="123 456 789" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rez-date">Data</label>
+          <input type="date" id="rez-date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="rez-time">Godzina</label>
+          <select id="rez-time" name="time" required>
+            <option value="">Wybierz godzinę</option>
+            <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+            <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+            <option>20:00</option><option>21:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="rez-guests">Liczba osób</label>
+        <select id="rez-guests" name="guests" required>
+          <option value="">Wybierz liczbę osób</option>
+          <option>1–2 osoby</option><option>3–4 osoby</option><option>5–6 osób</option><option>7+ osób</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="rez-notes">Uwagi (opcjonalnie)</label>
+        <textarea id="rez-notes" name="message" rows="3" placeholder="Urodziny, alergie, inne życzenia…"></textarea>
+      </div>
+      <button type="submit" class="rez-submit">Zarezerwuj stolik</button>
+    </form>
   </div>
 </section>
 

@@ -230,7 +230,9 @@
     <div><p class="section-label">Karta dań</p><h2 class="section-title">Nasze menu</h2></div>
     <div class="menu-tabs">
       <button class="tab-btn active" onclick="showTab('burgery',this)">Burgery</button>
-      <button class="tab-btn" onclick="showTab('steki',this)">Steki</button>
+      <button class="tab-btn" onclick="showTab('premium',this)">Premium</button>
+      <button class="tab-btn" onclick="showTab('pizza',this)">Pizza</button>
+      <button class="tab-btn" onclick="showTab('dania',this)">Dania</button>
       <button class="tab-btn" onclick="showTab('przekaski',this)">Przekąski</button>
       <button class="tab-btn" onclick="showTab('napoje',this)">Napoje</button>
     </div>
@@ -249,22 +251,45 @@
       <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Burger Luca Brasi</div><div class="menu-item-desc">2× wołowina 180g, 2× ser, 2× bacon, sałata, cebula, pikle, sos, ketchup, musztarda</div></div><div class="menu-item-price">53 zł</div></div>
       <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Burger Koci Loko</div><div class="menu-item-desc">3× wołowina 180g, 6× cheddar, 9× bacon, pikle, cebula, sos</div></div><div class="menu-item-price">62 zł</div></div>
     </div>
-    <div class="menu-category" id="cat-steki">
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Stek Rib-Eye 250g</div><div class="menu-item-desc">Wołowina premium, masło ziołowe, podawany z frytkami i sałatką</div></div><div class="menu-item-price">75 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Stek Sirloin 300g</div><div class="menu-item-desc">Polędwica wołowa, sos pieprzowy lub grzybowy, ziemniaki pieczone</div></div><div class="menu-item-price">82 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Stek T-Bone 400g</div><div class="menu-item-desc">Klasyczny T-bone, masło truflowe, frytki belgijskie, sos chimichurri</div></div><div class="menu-item-price">110 zł</div></div>
+    <div class="menu-category" id="cat-premium">
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Burger Ciupaga</div><div class="menu-item-desc">Wołowina 180g, opiekany ser camembert, sałata, bekon, pikantny sos serowy</div></div><div class="menu-item-price">48 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Burger El Harnaś</div><div class="menu-item-desc">Wołowina 180g, 3× bekon, 2× oscypek, sałata, żurawina, sos chilli-majo</div></div><div class="menu-item-price">51 zł</div></div>
+    </div>
+    <div class="menu-category" id="cat-pizza">
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Margherita</div><div class="menu-item-desc">Sos, ser mozzarella</div></div><div class="menu-item-price">37 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Salame</div><div class="menu-item-desc">Sos, ser mozzarella, salami</div></div><div class="menu-item-price">39 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Prosciutto</div><div class="menu-item-desc">Sos, ser mozzarella, szynka</div></div><div class="menu-item-price">41 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Prosciutto e Funghi</div><div class="menu-item-desc">Sos, ser mozzarella, szynka, pieczarki</div></div><div class="menu-item-price">41 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Prosciutto Crudo</div><div class="menu-item-desc">Sos, ser mozzarella, szynka parmeńska, rukola</div></div><div class="menu-item-price">45 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Chorizo</div><div class="menu-item-desc">Sos, ser mozzarella, kiełbasa chorizo, pomidorki koktajlowe</div></div><div class="menu-item-price">47 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Tonno e Cipolla</div><div class="menu-item-desc">Sos, ser mozzarella, tuńczyk, cebula</div></div><div class="menu-item-price">47 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Hawajska</div><div class="menu-item-desc">Sos, ser mozzarella, szynka, ananas</div></div><div class="menu-item-price">47 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Prosciutto e Rukola</div><div class="menu-item-desc">Sos, ser mozzarella, szynka parmeńska, rukola, pomidorki, parmezan, oliwa z oliwek</div></div><div class="menu-item-price">49 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Capricciosa</div><div class="menu-item-desc">Sos, ser mozzarella, szynka, pieczarki, karczochy, oliwki</div></div><div class="menu-item-price">49 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Pepperoni</div><div class="menu-item-desc">Sos, ser mozzarella di bufalo, salami pikantne, jalapeño, cebula czerwona</div></div><div class="menu-item-price">49 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pizza Calzone</div><div class="menu-item-desc">Sos, ser mozzarella, szynka, pieczarki, cebula, oliwa czosnkowa</div></div><div class="menu-item-price">49 zł</div></div>
+    </div>
+    <div class="menu-category" id="cat-dania">
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gyros drobiowy</div><div class="menu-item-desc">Frytki, mix sałat, tzatziki</div></div><div class="menu-item-price">44 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Smażony ser</div><div class="menu-item-desc">Frytki, surówka z pora, sos tatarski</div></div><div class="menu-item-price">44 zł</div></div>
     </div>
     <div class="menu-category" id="cat-przekaski">
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Skrzydełka Buffalo (8 szt.)</div><div class="menu-item-desc">Pikantne skrzydełka w sosie Buffalo, sos blue cheese, seler</div></div><div class="menu-item-price">32 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Frytki Belgijskie</div><div class="menu-item-desc">Podwójnie smażone, z sosem belgijskim lub majonezem</div></div><div class="menu-item-price">od 14 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Krążki Cebulowe (10 szt.)</div><div class="menu-item-desc">Chrupiące, panierowane, sos cheddarowy</div></div><div class="menu-item-price">18 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nachosy z Dipami</div><div class="menu-item-desc">Tortilla chips, salsa pomidorowa, guacamole, kwaśna śmietana</div></div><div class="menu-item-price">22 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Frytki belgijskie</div><div class="menu-item-desc"></div></div><div class="menu-item-price">od 14 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Frytki dla dzieci</div><div class="menu-item-desc">Długie i cienkie</div></div><div class="menu-item-price">od 14 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nuggetsy łagodne 200g</div><div class="menu-item-desc"></div></div><div class="menu-item-price">27 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Stripsy z kurczaka pikantne 200g</div><div class="menu-item-desc"></div></div><div class="menu-item-price">27 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Krążki cebulowe 8 szt.</div><div class="menu-item-desc"></div></div><div class="menu-item-price">30 zł</div></div>
     </div>
     <div class="menu-category" id="cat-napoje">
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Craft Cola</div><div class="menu-item-desc">Rzemieślnicza cola, podawana z lodem i limonką</div></div><div class="menu-item-price">12 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Lemoniada domowa</div><div class="menu-item-desc">Świeże cytryny, mięta, cukier trzcinowy</div></div><div class="menu-item-price">14 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Piwo z kranu</div><div class="menu-item-desc">Pytaj obsługę o aktualną kartę piw rzemieślniczych</div></div><div class="menu-item-price">od 14 zł</div></div>
-      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Woda / Soki</div><div class="menu-item-desc">Gazowana, niegazowana, soki owocowe</div></div><div class="menu-item-price">8 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pepsi 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pepsi Zero Cukru 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mirinda Orange 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">7Up 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Lipton Ice Tea zielona 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Lipton Ice Tea brzoskwiniowa 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Toma Nektar z czarnej porzeczki 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Toma Sok jabłkowy 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Toma Sok pomarańczowy 0,25l</div><div class="menu-item-desc"></div></div><div class="menu-item-price">11 zł</div></div>
     </div>
   </div>
   <p class="menu-note">Mięso wołowe wysmażamy medium. Ceny zawierają VAT. Menu może się zmieniać sezonowo. Pytaj obsługę o aktualne specjały.</p>
